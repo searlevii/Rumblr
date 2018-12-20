@@ -43,4 +43,16 @@ post '/signup' do
 end
 
 post '/' do
-  erb:
+  customer = User.find_by(username: params["username"], password: params["password"])
+  if customer
+    session[:user_id] = customer.id
+    redirect 'home'
+  else 
+    redirect '/'
+  end
+end
+
+get '/logout' do
+  session[:user_id] = nil
+  redirect '/'
+end

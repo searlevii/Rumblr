@@ -1,5 +1,28 @@
+* {
+  font-family: sans-serif;
+}
 h1 {
   text-align: center;
   font-family: sans-serif;
+}
+legend {
+  margin-left: 32%;
+}
+form {
+  height: 200px;
+  width: 200px;
+  margin-left: 7%;
+  margin-top: 7%;
+}
+.forms {
+  border: 1px solid;
+  height: 250px;
+  width: 250px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 15px 5px #00000088;
+  top: 50%;
+}
+.click {
+  margin: 0 auto;
 }
 
