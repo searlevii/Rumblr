@@ -25,4 +25,7 @@ form {
 .click {
   margin: 0 auto;
 }
-
+.banner {
+  height: 300px;
+  overflow: hidden;
+}
