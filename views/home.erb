@@ -1,9 +1,26 @@
 <body>
-    <a method="GET" href="./">
-        <button>
-            Sign Out
-        </button>
-    </a>
     <%= erb :'partials/header' %> 
+        <form action="/home" method="POST">
+            <input type="text" name="title">
+            <textarea style="resize:none" name="input" placeholder="yeerrrrr"></textarea>
+            <input type="submit">
+        </form>
+        <% @posts.reverse.each do |posts| %>
+            <div>
+                <p>
+                    <%= posts.username %>
+                </p>
+            </div>
+            <div>
+                <h2>
+                    <%= posts.title %>
+                </h2>
+            </div>
+            <div>
+                <p>
+                    <%= posts.input %>
+                </p>
+            </div>
+        <% end %>
     <%= erb :'partials/footer' %> 
 </body>

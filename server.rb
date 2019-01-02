@@ -30,6 +30,9 @@ get '/' do
 end
 
 get '/home' do
+  @user = User.find(session[:user_id])
+  @users = User.all
+  @posts = Post.all
   erb :home
 end
 
@@ -51,6 +54,12 @@ post '/' do
   else 
     redirect '/'
   end
+end
+
+post '/home' do
+  @user = User.find(session[:user_id])
+  @userPost = Post.create(user_id: session[:user_id], username: @user.username, input: params["input"], title: params["title"])
+  redirect '/home'
 end
 
 get '/logout' do

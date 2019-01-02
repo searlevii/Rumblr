@@ -1,5 +1,54 @@
-* {
-  font-family: sans-serif;
+*{
+  font-family: Helvetica;
+}
+body {
+  margin: 0;
+}
+.foot {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: #e84300 0.5px solid;
+  text-align: center;
+  color: #e84300;
+  overflow: hidden;
+}
+.nav {
+  overflow: hidden;
+  border-bottom: #e84300 
+  0.5px solid;
+}
+.nav a {
+  float: left;
+  color: #e84300;
+  text-align: center;
+  padding: 14px 14px;
+  text-decoration: none;
+  font-size: 24px;
+}
+.nav a:hover {
+  background-color: #852601;
+}
+.nav a:active {
+  border-bottom: 3px solid #852601;
+}
+#right {
+  float: right;
+}
+.feed {
+  margin-left: 12.5%;
+  width: 75%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  color: #ffffff;
+  background-color: #e84300;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.feed p {
+  margin-left: 5%;
+  margin-right: 5%;
 }
 h1 {
   text-align: center;
@@ -15,17 +64,39 @@ form {
   margin-top: 7%;
 }
 .forms {
-  border: 1px solid;
+  border: 1px solid #e84300;
   height: 250px;
   width: 250px;
-  margin: 0 auto;
-  box-shadow: 5px 5px 15px 5px #00000088;
+  margin: 10px auto;
   top: 50%;
 }
 .click {
   margin: 0 auto;
 }
 .banner {
-  height: 300px;
+  top: 0;
+  height: 150px;
   overflow: hidden;
+}
+.banner img{
+  width: 100%;
+  margin: -350px 0px 0px 0px;
+}
+.text {
+  position: absolute;
+  top: 5px;
+  z-index: 1;
+  background-color: #ffffff99;
+  color: #e84300;
+  height: 140px;
+  width: 140px;
+  margin-left: 46%;
+  text-align: center;
+  font-size: 40px;
+}
+#logo {
+  margin: 0px 0px 0px 0px;
+}
+.centered {
+  margin-left: 44.5%;
 }
