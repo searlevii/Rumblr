@@ -28,7 +28,6 @@ end
 
 register Sinatra::Reloader
 enable :sessions
-set :port, 7777
 
 get '/' do
   erb :login
