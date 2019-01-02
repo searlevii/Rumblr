@@ -75,6 +75,3 @@ end
 get '/profile' do
   erb :profile
 end
-
-post '/profile' do
-  @profileinfo = User.find(session[:user_id])
