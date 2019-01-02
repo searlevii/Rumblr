@@ -1,0 +1,17 @@
+<body>
+    <%= erb :'partials/header' %> 
+    <% @posts.reverse.each do |users| %>
+        <div class="feed">
+            <h2>
+                <%= users.username %>
+            </h2>
+            <p>
+                <%= users.title %>
+            </p>
+            <p>
+                <%= posts.input %>
+            </p>
+        </div>
+    <% end %>
+    <%= erb :'partials/footer' %> 
+</body>
