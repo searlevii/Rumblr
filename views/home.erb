@@ -9,9 +9,11 @@
         </div>
             <% @posts.reverse.each do |posts| %>
                 <div class="feed">
-                    <p>
-                        <%= posts.username %>
-                    </p>
+                    <a href="/profile/<%= posts.user_id %>">
+                        <p>
+                            <%= posts.username %>
+                        </p>
+                    </a>
                     <h2>
                         <%= posts.title %>
                     </h2>

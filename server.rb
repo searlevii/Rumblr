@@ -26,6 +26,7 @@ else
   )
 end
 
+
 register Sinatra::Reloader
 enable :sessions
 
@@ -71,6 +72,21 @@ get '/logout' do
   redirect '/'
 end
 
+get '/profile/delete/:id' do
+  @user = User.find(session[:user_id])
+  Post.find_by(user_id: @user.id).destroy
+  User.find(params['id']).destroy
+  redirect '/'
+end
+
+
 get '/profile' do
+  @user = User.find(session[:user_id])
+  @posts = Post.find_by(username: @user.username)
   erb :profile
+end
+
+get '/profile/:id' do
+  @user = User.find(params["id"])
+  erb :profile2
 end

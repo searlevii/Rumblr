@@ -1,6 +1,6 @@
 <body>
-    <%= erb :'partials/header' %> 
     <% if @user %>
+    <%= erb :'partials/header' %> 
         <div class="feed">
             <h2>
             Username: 
@@ -31,11 +31,6 @@
                         </p>   
                     <% end %>
                 </div>
-            <a href="/profile/delete/<%= @user.id %>">
-                <button>
-                    Delete Account
-                </button>
-            </a>
         </div>
     <% end %>
     <%= erb :'partials/footer' %> 
